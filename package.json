@@ -1,7 +1,7 @@
 {
   "name": "@paymenku/sdk-nodejs",
   "version": "0.1.0",
-  "description": "SDK Node.js untuk API Paymenku",
+  "description": "SDK Node.js untuk API Paymenku — QRIS, Virtual Account, e-wallet, payment link, dan wallet",
   "license": "MIT",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -24,7 +24,27 @@
   "scripts": {
     "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && node scripts/fix-cjs.mjs",
     "typecheck": "tsc -p tsconfig.esm.json --noEmit",
-    "test": "npm run build && node --test test/client.test.mjs"
+    "test": "npm run build && node --test test/client.test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paymenku/sdk-nodejs.git"
+  },
+  "homepage": "https://github.com/paymenku/sdk-nodejs#readme",
+  "bugs": {
+    "url": "https://github.com/paymenku/sdk-nodejs/issues"
+  },
+  "keywords": [
+    "paymenku",
+    "payment-gateway",
+    "qris",
+    "virtual-account",
+    "ewallet",
+    "indonesia"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
